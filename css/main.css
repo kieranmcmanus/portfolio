@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Prata');
 /* ==========================================================================
    Base styles:
    ========================================================================== */
@@ -37,21 +37,27 @@ img {
 Base Styles
 ------------------------------------------- */
 body {
+  font-family: 'Open Sans', sans-serif;
   text-align: center;
   background-color: #FFFFFF;
 }
 
+p {
+  font-family: 'Prata', serif;
+
+}
+
 h1{
-  font-size: 48px;
+  font-size: 72px;
   letter-spacing: 0.5em;
 }
 
 h2 {
-  font-size: 36px;
+  font-size: 48px;
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 36px;
   letter-spacing: 0.5em;
 }
 
@@ -60,18 +66,21 @@ Nav
 ------------------------------------------- */
 nav {
   background-color: #FFFFFF;
-  opacity: .70;
+  opacity: .7;
   position: fixed;
 	top: 0;
   left: 0;
 	right: 0;
   z-index: 100;
+  display: flex;
+  justify-content: space-between;
 }
 nav ul {
   list-style:none;
   display: inline-block;
   margin-top: 0px;
   margin-bottom: 0px;
+
 }
 nav li {
   display: inline-block;
@@ -81,12 +90,18 @@ nav a {
   display: inline-block;
   border-bottom: none;
   text-transform: uppercase;
+  padding: 5px;
+  color: #2C3E50;
+}
+nav a:hover {
+  color: #FC4349;
+  cursor: pointer;
 }
 /* ----------------------------------------
 Header
 ------------------------------------------- */
 header {
-  padding-top: 200px;
+  padding-top: 70px;
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url('../img/nyc.jpg');
@@ -101,11 +116,16 @@ About
   background-color: #6DBCDB;
   color: #FFFFFF;
   padding-top: 10px;
-  padding-bottom: 10px;
+}
+.about-me {
+  height: 50vh;
 }
 .skills {
   background-color: #FFFFFF;
   color: #2C3E50;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 50vh;
 }
 .skills_icons {
   display:flex;
