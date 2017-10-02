@@ -15,20 +15,8 @@ Light Blue: #6DBCDB
 Light Grey: #D7DADB
 White: #FFFFFF
 
-Ground Control to Major Tom
-Dark grey: #2B2E2E
-Grey: #595855
-Light grey: #A2ABA5
-Light bue: #CAE6E8
-Navy: #313F54
-
-Rise
-Navy: #2B3A42
-Blue: #3F5765
-Light blue: #BDD4DE
-White: #EFEFEF
-Orange: #E74C3C
 */
+
 /* Fix for responsive images */
 img {
   max-width: 100%;
@@ -104,9 +92,9 @@ header {
   padding-top: 70px;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url('../img/nyc.jpg');
+  background-image: url('../img/nyc2.jpg');
   background-attachment: fixed;
-  height: 100vh;
+  height: 95vh;
   color: #2C3E50;
 }
 /* ----------------------------------------
@@ -116,16 +104,17 @@ About
   background-color: #6DBCDB;
   color: #FFFFFF;
   padding-top: 10px;
+  position: relative;
 }
-.about-me {
-  height: 50vh;
+.about_me {
+  height: 47.5vh;
 }
 .skills {
   background-color: #FFFFFF;
   color: #2C3E50;
   padding-top: 10px;
   padding-bottom: 10px;
-  height: 50vh;
+  height: 47.5vh;
 }
 .skills_icons {
   display:flex;
@@ -146,8 +135,9 @@ Work
   color: #FFFFFF;
   padding-top: 10px;
   padding-bottom: 10px;
-  height: 100vh;
+  height: 95vh;
   background-size: cover;
+  position: relative;
 }
 .project_container {
   display: flex;
@@ -176,7 +166,6 @@ Work
 Contact
 ------------------------------------------- */
 #contact {
-  background-color: #3F5765;
   color: #FFFFFF;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -185,10 +174,81 @@ Contact
   background-image: url('../img/homeoffice1.jpg');
   background-attachment: fixed;
   height: 100vh;
+  position: relative;
+}
+form {
+
+}
+input, textarea, select {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  width: 30%;
+  color: #2C3E50;
+}
+textarea {
+  padding-bottom: 50px;
+}
+.contact_button {
+  display:block;
+  background-color: #FC4349;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 10px;
+  margin: 0 auto;
+  padding: 10px;
+}
+.contact_button a {
+  text-decoration: none;
+  color: #FFFFFF;
 }
 /* ----------------------------------------
 Footer
 ------------------------------------------- */
 footer {
-  background-color: #2B3A42;
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+}
+
+/* ----------------------------------------
+Scroll arrow
+------------------------------------------- */
+.arrow-wrap {
+  position:absolute;
+  z-index:1;
+  left:50%;
+  top:-5em;
+  margin-left:-5em;
+  background:#111;
+  width:10em;
+  height:10em;
+  padding:4em 2em;
+  border-radius:50%;
+  font-size:0.5em;
+  display:block;
+}
+
+.arrow {
+  float:left;
+  position:relative;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 3em 3em 0 3em;
+  border-color: #ffffff transparent transparent transparent;
+  -webkit-transform:rotate(360deg)
+}
+
+.arrow:after {
+  content:'';
+  position:absolute;
+  top:-3.2em;
+  left:-3em;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 3em 3em 0 3em;
+  border-color: #111 transparent transparent transparent;
+  -webkit-transform:rotate(360deg)
 }

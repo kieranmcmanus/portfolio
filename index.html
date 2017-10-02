@@ -34,6 +34,10 @@
   <main>
     <section id="about">
       <div class="about_me">
+        <a class="arrow-wrap" href="#about">
+        <span class="arrow"></span>
+        <!--<span class="hint">scroll</span>-->
+        </a>
         <h2>About Me</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
           id sollicitudin mauris, in tristique tellus. Nunc a eleifend mi,
@@ -78,6 +82,10 @@
       </div>
     </section>
     <section id="work">
+      <a class="arrow-wrap" href="#work">
+      <span class="arrow"></span>
+      <!--<span class="hint">scroll</span>-->
+      </a>
       <h2>Projects</h2>
       <div class="project_container">
         <div class="project">
@@ -95,12 +103,26 @@
     </div>
     </section>
     <section id="contact">
+      <a class="arrow-wrap" href="#contact">
+      <span class="arrow"></span>
+      <!--<span class="hint">scroll</span>-->
+      </a>
       <h2>Contact</h2>
+      <form action="https://formspree.io/kmcmanus41092@gmail.com" method="POST">
+        <input type="text" placeholder="Name" name="name">
+        <input type="email" placeholder="Email" name="_replyto">
+        <input type="text" placeholder="Subject" name="subject">
+        <textarea type="text" placeholder="Message"name="message"></textarea>
+        <button type="submit" value="Send" class="contact_button">Send</button>
+      </form>
+      <footer>
+        <div class="copyright">
+          <p>© 2017 Kieran McManus</p>
+        </div>
+      </footer>
     </section>
   </main>
-  <footer>
-
-  </footer>
-
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
