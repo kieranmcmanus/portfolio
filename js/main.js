@@ -1,44 +1,28 @@
-//Scroll Arrow Codepen
-
-//this is where we apply opacity to the arrow
-$(window).scroll( function(){
-
-  //get scroll position
-  var topWindow = $(window).scrollTop();
-  //multipl by 1.5 so the arrow will become transparent half-way up the page
-  var topWindow = topWindow * 1.5;
-
-  //get height of window
-  var windowHeight = $(window).height();
-
-  //set position as percentage of how far the user has scrolled
-  var position = topWindow / windowHeight;
-  //invert the percentage
-  position = 1 - position;
-
-  //define arrow opacity as based on how far up the page the user has scrolled
-  //no scrolling = 1, half-way up the page = 0
-  $('.arrow-wrap').css('opacity', position);
-
+$('#hamburger').on('click', function() {
+    $('.nav2 ul').toggle();
+    $('.nav2').toggleClass('block');
 });
 
 
+$(window).on('scroll', function () {
+	// Step 1: Google $(window).scrollTop();
+	// Find out how far they've scrolled
+	var distanceScrolled = $(window).scrollTop();
 
+	console.log('The distance scrolled is: ' + distanceScrolled);
 
+  var w = window.innerWidth;
 
-
-//Code stolen from css-tricks for smooth scrolling:
-$(function() {
-  $('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html,body').animate({
-          scrollTop: target.offset().top
-        }, 1000);
-        return false;
-      }
-    }
-  });
+  if (distanceScrolled > 662) {
+  	$('.skill img').css({'-webkit-transform': 'rotateY(' + 360 + 'deg)'});
+    $('.skill img').css({'transform': 'rotateY(' + 360 + 'deg)'});
+  }
+  // if (distanceScrolled > 1370) {
+  //   $('.project').fadeIn(2000);
+  // }
+  if (distanceScrolled < 30 && w > 870) {
+    $('.main_nav').hide();
+  } else if (distanceScrolled > 30 && w > 870) {
+    $('.main_nav').fadeIn(350);
+  }
 });

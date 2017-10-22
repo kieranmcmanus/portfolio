@@ -26,12 +26,14 @@ Base Styles
 ------------------------------------------- */
 body {
   font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
   text-align: center;
   background-color: #FFFFFF;
 }
 
 p {
   font-family: 'Prata', serif;
+  -webkit-font-smoothing: antialiased;
 
 }
 
@@ -52,7 +54,7 @@ h3 {
 /* ----------------------------------------
 Nav
 ------------------------------------------- */
-nav {
+nav, .nav2 nav{
   background-color: #FFFFFF;
   opacity: .7;
   position: fixed;
@@ -63,17 +65,20 @@ nav {
   display: flex;
   justify-content: space-between;
 }
+.main_nav {
+  display: none;
+}
 nav ul {
   list-style:none;
   display: inline-block;
   margin-top: 0px;
   margin-bottom: 0px;
-
+  transition: all .3s ease-in-out;
 }
 nav li {
   display: inline-block;
 }
-nav a {
+nav a, .nav2 nav a {
   text-decoration: none;
   display: inline-block;
   border-bottom: none;
@@ -81,9 +86,29 @@ nav a {
   padding: 5px;
   color: #2C3E50;
 }
-nav a:hover {
+nav a:hover, .nav2 nav a:hover {
   color: #FC4349;
   cursor: pointer;
+}
+#hamburger {
+  display: none;
+  font-size: 20px;
+  color: #2C3E50;
+  margin: 0 auto;
+  text-align: center;
+}
+.nav2 ul {
+  list-style:none;
+  display: none;
+  background-color: #FFFFFF;
+  margin: 0 auto;
+  padding: 0;
+}
+.nav2 li {
+  display: block;
+}
+.block {
+  display: block;
 }
 /* ----------------------------------------
 Header
@@ -92,9 +117,9 @@ header {
   padding-top: 70px;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url('../img/nyc2.jpg');
+  background-image: url('../img/nyc3.jpg');
   background-attachment: fixed;
-  height: 95vh;
+  height: 100vh;
   color: #2C3E50;
 }
 /* ----------------------------------------
@@ -107,26 +132,31 @@ About
   position: relative;
 }
 .about_me {
-  height: 47.5vh;
+  height: 50vh;
 }
 .skills {
   background-color: #FFFFFF;
   color: #2C3E50;
   padding-top: 10px;
   padding-bottom: 10px;
-  height: 47.5vh;
+  height: 50vh;
 }
 .skills_icons {
   display:flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .skills_icons img {
   max-width: 100px;
   border-radius: 10px;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  transition: all 1s ease-in-out;
 }
+.skills_icons:hover {
+  transform: rotate(360deg);
+}
+
 /* ----------------------------------------
 Work
 ------------------------------------------- */
@@ -135,7 +165,7 @@ Work
   color: #FFFFFF;
   padding-top: 10px;
   padding-bottom: 10px;
-  height: 95vh;
+  height: 100vh;
   background-size: cover;
   position: relative;
 }
@@ -144,7 +174,13 @@ Work
   justify-content: space-around;
 }
 .project {
-  width: 40%;
+  width: 45%;
+  /*display: none;*/
+  transition: all .3s ease-in-out;
+}
+.project:hover {
+  opacity: .7;
+  cursor: pointer;
 }
 .project img {
   border-radius: 10px;
@@ -185,9 +221,16 @@ input, textarea, select {
   margin-bottom: 10px;
   width: 30%;
   color: #2C3E50;
+  border-radius: 10px;
+  border: none;
+  padding: 5px;
 }
 textarea {
   padding-bottom: 50px;
+  border-radius: 10px;
+}
+placeholder {
+
 }
 .contact_button {
   display:block;
@@ -218,9 +261,9 @@ Scroll arrow
   position:absolute;
   z-index:1;
   left:50%;
-  top:-5em;
+  bottom:5em;
   margin-left:-5em;
-  background:#111;
+  background:none;
   width:10em;
   height:10em;
   padding:4em 2em;
@@ -228,16 +271,19 @@ Scroll arrow
   font-size:0.5em;
   display:block;
 }
-
 .arrow {
   float:left;
   position:relative;
-  width: 0px;
-  height: 0px;
-  border-style: solid;
-  border-width: 3em 3em 0 3em;
-  border-color: #ffffff transparent transparent transparent;
-  -webkit-transform:rotate(360deg)
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  box-sizing: border-box;
+  -webkit-animation: 2s infinite;
+  animation: scroll 2s infinite;
 }
 
 .arrow:after {
@@ -249,6 +295,65 @@ Scroll arrow
   height: 0px;
   border-style: solid;
   border-width: 3em 3em 0 3em;
-  border-color: #111 transparent transparent transparent;
+  border-color: transparent;
   -webkit-transform:rotate(360deg)
+}
+#about-scroll {
+  border-left: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+  }
+  20% {
+    -webkit-transform: rotate(-45deg) translate(-10px, 10px);
+  }
+  40% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+  }
+}
+@keyframes scroll {
+  0% {
+    transform: rotate(-45deg) translate(0, 0);
+  }
+  20% {
+    transform: rotate(-45deg) translate(-10px, 10px);
+  }
+  40% {
+    transform: rotate(-45deg) translate(0, 0);
+  }
+}
+
+/* ----------------------------------------
+Media Queries
+------------------------------------------- */
+@media screen and (max-width: 1550px) {
+  .about, .venues {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 870px) {
+  #hamburger {
+    display: block;
+  }
+  .main_nav {
+    display: none;
+  }
+  .skills_icons {
+    flex-wrap: wrap;
+  }
+  .project_container {
+    display: block;
+  }
+  .project {
+    width: 95%;
+    margin: 0 auto;
+    padding-bottom: 10px;
+  }
+  input, textarea, select {
+    width: 80%;
+  }
 }

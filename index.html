@@ -18,7 +18,7 @@
     </head>
 <body>
   <header>
-    <nav>
+    <nav class="main_nav">
       <ul class="name">
         <li><a href="index.html">Kieran McManus</a></li>
       </ul>
@@ -28,16 +28,22 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
+    <nav class="nav2">
+      <a id="hamburger" href="#"><i class="fa fa-bars"></i></a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
     <h1>Kieran McManus</h1>
     <h3>Front End Web Developer</h3>
+    <a class="arrow-wrap" href="#about"><span class="arrow"></span></a>
   </header>
   <main>
     <section id="about">
       <div class="about_me">
-        <a class="arrow-wrap" href="#about">
-        <span class="arrow"></span>
-        <!--<span class="hint">scroll</span>-->
-        </a>
         <h2>About Me</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
           id sollicitudin mauris, in tristique tellus. Nunc a eleifend mi,
@@ -60,53 +66,47 @@
       <div class="skills">
         <h2>Skills</h2>
         <div class="skills_icons">
-          <div class="skill1">
+          <div class="skill">
             <img src="img/html5.png" alt="HTML">
           </div>
-          <div class="skill2">
+          <div class="skill">
             <img src="img/css3.png" alt="CSS">
           </div>
-          <div class="skill3">
+          <div class="skill">
             <img src="img/javascript.png" alt="Javascript">
           </div>
-          <div class="skill4">
+          <div class="skill">
             <img src="img/jquery.png" alt="jQuery">
           </div>
-          <div class="skill5">
+          <div class="skill">
             <img src="img/wordpress.png" alt="Wordpress">
           </div>
-          <div class="skill6">
+          <div class="skill">
             <img src="img/photoshop.jpg" alt="Adobe Photoshop">
           </div>
         </div>
       </div>
+      <a class="arrow-wrap" href="#about"><span class="arrow" id="about-scroll"></span></a>
     </section>
     <section id="work">
-      <a class="arrow-wrap" href="#work">
-      <span class="arrow"></span>
-      <!--<span class="hint">scroll</span>-->
-      </a>
       <h2>Projects</h2>
       <div class="project_container">
         <div class="project">
-          <img src="img/kieran.png" alt="Kieran McManus">
-          <button class="project_button">
+          <a href="http://kieranmcmusic.com/" target="_blank"><img src="img/kieran2.jpg" alt="Kieran McManus"></a>
+          <!--<button class="project_button">
             <a href="">Kieran McManus</a>
-          </button>
+          </button>-->
         </div>
         <div class="project">
-          <img src="img/webster.png" alt="Webster">
-          <button class="project_button">
+          <a href="https://websterapartments.org/" target="_blank"><img src="img/webster2.jpg" alt="Webster"></a>
+          <!--<button class="project_button">
             <a href="">Webster</a>
-          </button>
+          </button>-->
         </div>
     </div>
+    <a class="arrow-wrap" href="#about"><span class="arrow"></span></a>
     </section>
     <section id="contact">
-      <a class="arrow-wrap" href="#contact">
-      <span class="arrow"></span>
-      <!--<span class="hint">scroll</span>-->
-      </a>
       <h2>Contact</h2>
       <form action="https://formspree.io/kmcmanus41092@gmail.com" method="POST">
         <input type="text" placeholder="Name" name="name">
