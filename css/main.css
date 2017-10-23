@@ -34,9 +34,11 @@ body {
 p {
   font-family: 'Prata', serif;
   -webkit-font-smoothing: antialiased;
-
 }
 
+.emoji {
+  width: 20px;
+}
 h1{
   font-size: 72px;
   letter-spacing: 0.5em;
@@ -50,6 +52,7 @@ h3 {
   font-size: 36px;
   letter-spacing: 0.5em;
 }
+
 
 /* ----------------------------------------
 Nav
@@ -93,9 +96,15 @@ nav a:hover, .nav2 nav a:hover {
 #hamburger {
   display: none;
   font-size: 20px;
-  color: #2C3E50;
   margin: 0 auto;
   text-align: center;
+  padding: 0;
+}
+#hamburger i {
+  color: #2C3E50;
+}
+#hamburger i:hover {
+  color: #FC4349;
 }
 .nav2 ul {
   list-style:none;
@@ -131,6 +140,10 @@ About
   padding-top: 10px;
   position: relative;
 }
+#about p {
+  width: 55%;
+  margin: 0 auto;
+}
 .about_me {
   height: 50vh;
 }
@@ -157,6 +170,18 @@ About
   transform: rotate(360deg);
 }
 
+.social {
+  margin-top: 50px;
+}
+
+i {
+  color: #FFFFFF;
+  padding: 10px;
+}
+i:hover {
+  color: #FC4349;
+}
+
 /* ----------------------------------------
 Work
 ------------------------------------------- */
@@ -172,6 +197,7 @@ Work
 .project_container {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 .project {
   width: 45%;
@@ -339,7 +365,7 @@ Media Queries
   #hamburger {
     display: block;
   }
-  .main_nav {
+  .main_nav, .name, .menu {
     display: none;
   }
   .skills_icons {
@@ -355,5 +381,24 @@ Media Queries
   }
   input, textarea, select {
     width: 80%;
+  }
+  #about p {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 500px) {
+  h1{
+    font-size: 48px;
+    letter-spacing: 0.3em;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+  h3 {
+    font-size: 24px;
+  }
+  #about p {
+    width: 100%;
   }
 }
