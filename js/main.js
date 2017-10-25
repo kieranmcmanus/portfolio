@@ -13,9 +13,13 @@ $(window).on('scroll', function () {
 
   var w = window.innerWidth;
 
-  if (distanceScrolled > 662) {
-  	$('.skill img').css({'-webkit-transform': 'rotateY(' + 360 + 'deg)'});
-    $('.skill img').css({'transform': 'rotateY(' + 360 + 'deg)'});
+  if (distanceScrolled > 662 && distanceScrolled < 700) {
+  	// $('.skill img').css({'-webkit-transform': 'rotateY(' + 360 + 'deg)'});
+    $('.skill img').addClass('rotateY_effect').delay(1000).queue(function(next){
+    $(this).removeClass('rotateY_effect');
+    next();
+});
+    // $('.skill img').removeClass('rotateY_effect');
   }
   // if (distanceScrolled > 1370) {
   //   $('.project').fadeIn(2000);
@@ -26,3 +30,8 @@ $(window).on('scroll', function () {
     $('.main_nav').fadeIn(350);
   }
 });
+
+// $(".skill img").mouseover(function() {
+//   $('.skill img').css({'-webkit-transform': 'rotateY(' + 360 + 'deg)'});
+//   $('.skill img').css({'transform': 'rotateY(' + 360 + 'deg)'});
+// });
