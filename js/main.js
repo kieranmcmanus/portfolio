@@ -3,6 +3,9 @@ $('#hamburger').on('click', function() {
     $('.nav2').toggleClass('block');
 });
 
+$('.skill img').mouseover(function() {
+  $(this).removeClass('rotateY_effect');
+});
 
 $(window).on('scroll', function () {
 	// Step 1: Google $(window).scrollTop();
@@ -13,7 +16,7 @@ $(window).on('scroll', function () {
 
   var w = window.innerWidth;
 
-  if (distanceScrolled > 662 && distanceScrolled < 700) {
+  if (distanceScrolled > 662 && distanceScrolled < 1000) {
   	// $('.skill img').css({'-webkit-transform': 'rotateY(' + 360 + 'deg)'});
     $('.skill img').addClass('rotateY_effect').delay(1000).queue(function(next){
     $(this).removeClass('rotateY_effect');
