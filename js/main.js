@@ -3,10 +3,6 @@ $('#hamburger').on('click', function() {
     $('.nav2').toggleClass('block');
 });
 
-$('.skill img').mouseover(function() {
-  $(this).removeClass('rotateY_effect');
-});
-
 $(window).on('scroll', function () {
 	// Step 1: Google $(window).scrollTop();
 	// Find out how far they've scrolled
