@@ -415,3 +415,8 @@ Media Queries
     width: 100%;
   }
 }
+@media screen and (max-height: 600px) {
+  .arrow-wrap {
+    display: none;
+  }
+}
