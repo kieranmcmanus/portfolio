@@ -147,22 +147,22 @@ About
   margin: 0 auto;
 }
 .about_me {
-  height: 50vh;
+  /* height: 100vh; */
   padding-bottom: 50px;
 }
 .about_me h2 {
   margin-top: 0.5em
 }
-.skills {
+#skills {
   background-color: #FFFFFF;
   color: #2C3E50;
-  padding-top: 10px;
-  padding-bottom: 100px;
-  height: 50vh;
+  padding: 10px 200px 100px 200px;
+  /* height: 100vh; */
 }
 .skills_icons {
   display:flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .skills_icons img {
@@ -178,6 +178,10 @@ About
 }
 .rotateX_effect {
   transform: rotate(360deg);
+}
+
+.skill {
+  padding: 10px;ß
 }
 
 .skill img:hover {
@@ -203,7 +207,7 @@ Work
   color: #FFFFFF;
   padding-top: 10px;
   padding-bottom: 10px;
-  height: 100vh;
+  /* height: 100vh; */
   background-size: cover;
   position: relative;
 }
@@ -211,9 +215,10 @@ Work
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  padding: 50px;
 }
 .project {
-  width: 45%;
+  width: 55%;
   /*display: none;*/
   transition: all .3s ease-in-out;
 }
@@ -233,9 +238,12 @@ Work
   margin: 0 auto;
   padding: 10px;
 }
-.project_button a {
+.project_info a {
   text-decoration: none;
-  color: #FC4349;
+  color: #FFFFFF;
+}
+.project_info {
+  width: 35%;
 }
 /* ----------------------------------------
 Contact
