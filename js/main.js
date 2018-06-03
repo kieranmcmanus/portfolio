@@ -30,6 +30,20 @@ $(window).on('scroll', function () {
   }
 });
 
+$(function() {
+
+  $(window).on('load resize', function() {
+    if ($(window).width() < 870) {
+      $('.project_desktop').hide();
+      $('.project_mobile').show();
+    } else {
+      $('.project_mobile').hide();
+      $('.project_desktop').show();
+    }
+  });
+
+});
+
 // $(".skill img").mouseover(function() {
 //   $('.skill img').css({'-webkit-transform': 'rotateY(' + 360 + 'deg)'});
 //   $('.skill img').css({'transform': 'rotateY(' + 360 + 'deg)'});

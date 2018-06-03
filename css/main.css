@@ -181,7 +181,7 @@ About
 }
 
 .skill {
-  padding: 10px;ß
+  padding: 10px;
 }
 
 .skill img:hover {
@@ -288,6 +288,10 @@ placeholder {
   margin: 0 auto;
   padding: 10px;
 }
+.contact_button:hover {
+  background-color: #BD3237;
+  transition: all .3s ease-in-out;
+}
 .contact_button a {
   text-decoration: none;
   color: #FFFFFF;
@@ -376,9 +380,12 @@ Scroll arrow
 /* ----------------------------------------
 Media Queries
 ------------------------------------------- */
-@media screen and (max-width: 1550px) {
-  .about, .venues {
-    margin: 0 auto;
+@media screen and (max-width: 1000px) {
+  #skills {
+    padding: 10px 10px 100px 10px;
+  }
+  .skills_icons img {
+    margin: 0;
   }
 }
 
@@ -394,11 +401,16 @@ Media Queries
   }
   .project_container {
     display: block;
+    padding: 10px;
   }
   .project {
     width: 95%;
     margin: 0 auto;
     padding-bottom: 10px;
+  }
+  .project_info {
+    width: 95%;
+    margin: 0 auto;
   }
   input, textarea, select {
     width: 80%;
@@ -408,6 +420,13 @@ Media Queries
   }
 }
 @media screen and (max-width: 500px) {
+  header {
+    background-attachment: scroll !important;
+    background-position: center center !important;
+  }
+  .skill {
+    padding: 5px;
+  }
   h1{
     font-size: 48px;
     letter-spacing: 0.3em;
